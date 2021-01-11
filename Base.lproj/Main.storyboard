@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DisplayOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZD-yd-XpL">
+                                <rect key="frame" x="24" y="49" width="327" height="30"/>
+                                <state key="normal" title="Draw new card"/>
+                                <connections>
+                                    <action selector="drawNewCardButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nos-Ud-B2c"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvy-Mw-JLT">
+                                <rect key="frame" x="351" y="89" width="0.0" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pED-Ok-cn1">
+                                <rect key="frame" x="24" y="132" width="327" height="460"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="460" id="qaB-qp-BGP"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mvy-Mw-JLT" firstAttribute="top" secondItem="GZD-yd-XpL" secondAttribute="bottom" constant="10" id="1gE-q2-lp1"/>
+                            <constraint firstItem="pED-Ok-cn1" firstAttribute="top" secondItem="mvy-Mw-JLT" secondAttribute="bottom" constant="10" id="7Ym-ea-xtE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GZD-yd-XpL" secondAttribute="trailing" constant="8" id="9cB-Rs-3nL"/>
+                            <constraint firstItem="pED-Ok-cn1" firstAttribute="top" secondItem="GZD-yd-XpL" secondAttribute="bottom" constant="53" id="OUx-9w-EJI"/>
+                            <constraint firstItem="pED-Ok-cn1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="VRV-SR-9Fx"/>
+                            <constraint firstAttribute="trailing" secondItem="mvy-Mw-JLT" secondAttribute="trailing" constant="24" id="VdQ-tF-Ti3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pED-Ok-cn1" secondAttribute="bottom" constant="75" id="ecR-Bf-MBt"/>
+                            <constraint firstItem="GZD-yd-XpL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="ghU-Ha-XaE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pED-Ok-cn1" secondAttribute="trailing" constant="8" id="hgF-FO-VhH"/>
+                            <constraint firstItem="mvy-Mw-JLT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="udf-JZ-hfH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="pED-Ok-cn1" id="z56-zh-7HA"/>
+                        <outlet property="label" destination="mvy-Mw-JLT" id="TRV-fn-ahh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.80000000000001" y="367.46626686656674"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
